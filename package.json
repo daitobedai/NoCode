@@ -1,0 +1,19 @@
+{
+  "name": "nocode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daitobedai/NoCode.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daitobedai/NoCode/issues"
+  },
+  "homepage": "https://github.com/daitobedai/NoCode#readme"
+}
