@@ -1,21 +1,41 @@
-import React, { PropTypes } from 'react';
-import { Link, IndexLink } from 'react-router';
+import React, {PropTypes} from "react";
+import { browserHistory } from 'react-router';
+import {Menu, Icon, Layout} from 'antd';
+const {Content} = Layout;
 
-// This is a class-based component because the current
-// version of hot reloading won't hot reload a stateless
-// component at the top-level.
 class App extends React.Component {
+  handleClick(e) {
+    switch (e.key){
+      case 'demo':
+        browserHistory.push('/fuel-savings');
+        break;
+      case 'home':
+        browserHistory.push('/');
+        break;
+      default:
+        browserHistory.push('/');
+    }
+  }
+
   render() {
     return (
-      <div>
-        <IndexLink to="/">Home</IndexLink>
-        {' | '}
-        <Link to="/fuel-savings">Demo App</Link>
-        {' | '}
-        <Link to="/about">About</Link>
-        <br/>
-        {this.props.children}
-      </div>
+      <Layout>
+        <Content>
+          <Menu
+            mode="horizontal"
+            onClick={this.handleClick}
+            defaultSelectedKeys={['home']}
+          >
+            <Menu.Item key="home">
+              <Icon type="home"/>首页
+            </Menu.Item>
+            <Menu.Item key="demo">
+              <Icon type="bulb"/>demo
+            </Menu.Item>
+          </Menu>
+          {this.props.children}
+        </Content>
+      </Layout>
     );
   }
 }

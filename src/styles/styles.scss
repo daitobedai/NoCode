@@ -5,25 +5,25 @@ $vin-red: #ff0000;
 
 /* Styles */
 body {
-  font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  line-height: 1.4em;
-  color: #4d4d4d;
-  min-width: 230px;
-  max-width: 550px;
-  margin: 0 auto;
+  font-size: 14px;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   font-smoothing: antialiased;
   font-weight: 300;
-}
-
-td {
-	padding: 12px;
+  overflow: hidden;
 }
 
 h2 {
 	color: $vin-blue;
 }
+
+ol {
+  color: $vin-red;
+}
+
+.leftImg {}
+.header{padding: 0; height: 100%}
 
 .savings { color: $vin-green; }
 .loss { color: $vin-red; }

@@ -1,16 +1,21 @@
 import React from 'react';
-import {Link} from 'react-router';
+
+const browerHeight = window.innerHeight;
 
 const HomePage = () => {
   return (
     <div>
-      <h1>React Slingshot</h1>
+      <div style={{height: browerHeight - 48,display: 'inline-block'}}>
+        <img style={{height: '100%'}} src="../resource/image/darkSoul3.png"></img>
+      </div>
+      <div style={{display: 'inline-block',verticalAlign:'top'}}>
+        <h1>黑暗之魂攻略进度</h1>
 
-      <h2>Get Started</h2>
-      <ol>
-        <li>Review the <Link to="fuel-savings">demo app</Link></li>
-        <li>Remove the demo and start coding: npm run remove-demo</li>
-      </ol>
+        <h2>黑魂1</h2>
+        <ol>
+          <li>刚打完灰太狼</li>
+        </ol>
+      </div>
     </div>
   );
 };
