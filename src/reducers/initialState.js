@@ -1,4 +1,8 @@
 export default {
+  showContent:{
+    urlList:[],
+    iframeSource:''
+  },
   fuelSavings: {
     newMpg: '',
     tradeMpg: '',

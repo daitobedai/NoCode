@@ -1,6 +1,5 @@
 import React from 'react';
 import img from "../resource/image/darkSoul3.png"
-import {Table} from 'antd';
 
 const browerHeight = window.innerHeight;
 
@@ -11,7 +10,7 @@ const HomePage = () => {
         <img style={{height: '100%'}} src={img}></img>
       </div>
       <div style={{display: 'inline-block',verticalAlign:'top'}}>
-        <h1>黑暗之魂攻略进度</h1>
+        <h1>黑之魂进度</h1>
 
         <h2>黑魂1</h2>
         <ol>
