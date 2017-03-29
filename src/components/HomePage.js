@@ -1,5 +1,6 @@
 import React from 'react';
 import img from "../resource/image/darkSoul3.png"
+import {Table} from 'antd';
 
 const browerHeight = window.innerHeight;
 
