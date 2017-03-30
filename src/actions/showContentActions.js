@@ -1,10 +1,15 @@
 import "whatwg-fetch";
 import * as types from '../constants/actionTypes';
 
-export function getContent() {
+export function getContent(text) {
+  let url = 'http://localhost:8010/api/hello';
+  if (text) {
+    url += '?text=' + text;
+  }
+
   return function (dispatch) {
     fetch(
-      "http://localhost:8080/api/hello", {
+      url, {
         credentials: "include",
         method: "GET",
       })

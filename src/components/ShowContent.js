@@ -1,13 +1,15 @@
 import React, {PropTypes} from 'react';
-import {Table,Layout} from 'antd';
+import {Table,Layout,Input} from 'antd';
 
 const {Sider, Content } = Layout;
+const {Search} = Input;
 
 class ShowContent extends React.Component {
   constructor(props, context) {
     super(props, context);
 
     this.handleColSelected = this.handleColSelected.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   componentDidMount() {
@@ -16,6 +18,10 @@ class ShowContent extends React.Component {
 
   handleColSelected(record){
     this.props.changeIfameSource(record.url);
+  }
+
+  handleSearch(value){
+    this.props.getContent(value);
   }
 
   render(){
@@ -35,6 +41,11 @@ class ShowContent extends React.Component {
     return (
       <Layout style={{height: window.innerHeight - 48,margin:0,overflow:'hidden'}}>
         <Sider style={{ background: '#fff',overflow: 'auto'}}>
+          <Search
+            placeholder="模糊查询"
+            style={{ width: 200 }}
+            onSearch={value => this.handleSearch(value)}
+          />
           <Table dataSource={showContent.urlList} columns={tableConfigs.columns} pagination={tableConfigs.pagination}
               size={tableConfigs.size} rowSelection={tableConfigs.rowSelection}/>
         </Sider>
