@@ -1,7 +1,7 @@
 {
-  "name": "react-slingshot",
+  "name": "noCode",
   "version": "5.0.0",
-  "description": "Starter kit for creating apps with React and Redux",
+  "description": "just for fun",
   "engines": {
     "npm": ">=3"
   },
@@ -27,7 +27,6 @@
     "open:cover": "npm run test:cover && open coverage/index.html",
     "analyze-bundle": "babel-node ./tools/analyzeBundle.js"
   },
-  "author": "Cory House",
   "license": "MIT",
   "dependencies": {
     "antd": "2.7.0",
@@ -112,9 +111,5 @@
     "flux",
     "boilerplate",
     "starter"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/coryhouse/react-slingshot"
-  }
+  ]
 }

@@ -7,9 +7,6 @@ const {Content} = Layout;
 class App extends React.Component {
   handleClick(e) {
     switch (e.key){
-      case 'demo':
-        browserHistory.push('/fuel-savings');
-        break;
       case 'home':
         browserHistory.push('/');
         break;
@@ -33,11 +30,8 @@ class App extends React.Component {
             <Menu.Item key="home">
               <Icon type="home"/>首页
             </Menu.Item>
-            <Menu.Item key="demo">
-              <Icon type="bulb"/>demo
-            </Menu.Item>
             <Menu.Item key="content">
-              <Icon type="bulb"/>content
+              <Icon type="bulb"/>查看
             </Menu.Item>
           </Menu>
           {this.props.children}
